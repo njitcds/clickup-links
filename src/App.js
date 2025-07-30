@@ -6,6 +6,17 @@ import Section from './components/Section/Section';
 // Data for our sections and cards
 const sectionsData = [
   {
+    title: 'Requesting an Event',
+    cards: [
+      {
+        icon: '➕',
+        title: 'Request Form',
+        description: 'Form to request an event from NJIT CDS',
+        link: 'https://forms.clickup.com/90132059689/f/2ky4m5h9-593/NBBTUYY56HJ9TLEW0N',
+      },
+    ],
+  },
+  {
     title: 'Cummulative Views',
     cards: [
       {
