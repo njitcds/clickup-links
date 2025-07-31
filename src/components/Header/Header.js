@@ -9,7 +9,7 @@ const Header = () => {
         <span>NJIT CDS Click Up Links</span>
       </div>
       <nav className={styles.navLinks}>
-        <a href="#features">Master Calender</a>
+        <a href="#master-calendar">Master Calendar</a>
         {/* <button className={styles.ctaButton}>Get Started</button> */}
       </nav>
     </header>
