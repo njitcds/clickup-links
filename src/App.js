@@ -44,7 +44,7 @@ const sectionsData = [
     cards: [
       {
         icon: '👤',
-        title: 'Carolina Barba Grande',
+        title: 'Carolina Barba Granda',
         description: 'Events where Carolina is invloved/volunteering',
         link: 'https://sharing.clickup.com/90132059689/l/h/2ky4m5h9-953/f91a4ae309bcbbf',
       },
