@@ -37,6 +37,12 @@ const sectionsData = [
         description: 'Calendar View for all the Upcoming Events logged in Master Calendar.',
         link: 'https://sharing.clickup.com/90132059689/c/h/6-901316860692-5/b90696a917d88e8',
       },
+      {
+        icon: '🕰️',
+        title: 'After Hour Coverage Events',
+        description: 'List of Events needing After Hour Coverage',
+        link: 'https://sharing.clickup.com/90132059689/l/h/2ky4m5h9-993/88bf173bf7e8f51',
+      },
     ],
   },
   {
