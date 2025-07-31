@@ -28,13 +28,13 @@ const sectionsData = [
       {
         icon: '👥',
         title: 'Event List by Team',
-        description: 'Set clear objectives and track your progress with measurable targets.',
+        description: 'All the upcoming events in MAster Calendar grouped by Hosting Team',
         link: 'https://sharing.clickup.com/90132059689/l/h/2ky4m5h9-893/697acd6252dc213',
       },
       {
         icon: '🗓️',
-        title: 'Calender View',
-        description: 'Visualize your project timelines and strategic initiatives effortlessly.',
+        title: 'Calendar View',
+        description: 'Calendar View for all the Upcoming Events logged in Master Calendar.',
         link: 'https://sharing.clickup.com/90132059689/c/h/6-901316860692-5/b90696a917d88e8',
       },
     ],
