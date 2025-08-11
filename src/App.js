@@ -40,8 +40,14 @@ const sectionsData = [
       {
         icon: '🕰️',
         title: 'After Hour Coverage Events',
-        description: 'List of Events needing After Hour Coverage',
+        description: 'List of Events needing After Hour Coverage.',
         link: 'https://sharing.clickup.com/90132059689/l/h/2ky4m5h9-993/88bf173bf7e8f51',
+      },
+      {
+        icon: '🧑🏻‍🎓',
+        title: 'Mentor Support Events',
+        description: 'List of Events reqeusting Mentors Support.',
+        link: 'https://sharing.clickup.com/90132059689/l/h/2ky4m5h9-1493/0f34c3cafc1ee00',
       },
     ],
   },
