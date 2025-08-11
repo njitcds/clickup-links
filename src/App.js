@@ -46,7 +46,7 @@ const sectionsData = [
       {
         icon: '🧑🏻‍🎓',
         title: 'Mentor Support Events',
-        description: 'List of Events reqeusting Mentors Support.',
+        description: 'List of Events requesting Mentors Support.',
         link: 'https://sharing.clickup.com/90132059689/l/h/2ky4m5h9-1493/0f34c3cafc1ee00',
       },
     ],
