@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Section from './components/Section/Section';
+import FAQ from './components/FAQ/FAQ';
 
 // Data for our sections and cards
 const sectionsData = [
@@ -101,14 +102,28 @@ const sectionsData = [
 ];
 
 function App() {
+  const [route, setRoute] = useState(window.location.hash || '#/');
+
+  useEffect(() => {
+    const onHashChange = () => setRoute(window.location.hash || '#/');
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
+
+  const isFaqs = route.replace(/^#/, '') === '/faqs';
+
   return (
     <>
       <Header />
-      <main className="app-container">
-        {sectionsData.map((section, index) => (
-          <Section key={index} title={section.title} cards={section.cards} />
-        ))}
-      </main>
+      {isFaqs ? (
+        <FAQ />
+      ) : (
+        <main className="app-container">
+          {sectionsData.map((section, index) => (
+            <Section key={index} title={section.title} cards={section.cards} />
+          ))}
+        </main>
+      )}
     </>
   );
 }
