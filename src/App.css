@@ -1,11 +1,32 @@
 /* Define color variables for a ClickUp-like theme */
-:root {
-  --background-primary: #1e1f21;
-  --background-secondary: #27282b;
+
+/* Dark theme (default) */
+:root,
+body[data-theme='dark'] {
+  --background-primary: #3f4044;
+  --background-secondary: #4d5055;
   --text-primary: #ffffff;
   --text-secondary: #a7a9be;
   --accent-gradient: linear-gradient(90deg, #7f56d9, #ff56bb);
-  --border-color: #3d3e42;
+  --border-color: #525358;
+  --bg: #1e1f21;
+  --primary: #7f56d9;
+  --primaryT: #7f56d980;
+  --transDur: 0.3s;
+}
+
+/* Light theme */
+body[data-theme='light'] {
+  --background-primary: #f7f7fa;
+  --background-secondary: #ffffff;
+  --text-primary: #1e1f21;
+  --text-secondary: #4a4a68;
+  --accent-gradient: linear-gradient(90deg, #7f56d9, #ff56bb);
+  --border-color: #e0e0e0;
+  --bg: #f7f7fa;
+  --primary: #7f56d9;
+  --primaryT: #7f56d980;
+  --transDur: 0.3s;
 }
 
 body {
@@ -15,8 +36,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background-primary);
-  color: var(--text-primary);
+  background-color: var(--background-primary) !important;
+  color: var(--text-primary) !important;
 }
 
 .app-container {

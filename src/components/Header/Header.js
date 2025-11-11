@@ -1,5 +1,7 @@
+
 import React from 'react';
 import styles from './Header.module.css';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   return (
@@ -10,6 +12,7 @@ const Header = () => {
       </div>
       <nav className={styles.navLinks}>
         <a href="#/faqs">🙋🏻‍♂️ FAQs</a>
+        <ThemeToggle />
         {/* <button className={styles.ctaButton}>Get Started</button> */}
       </nav>
     </header>
