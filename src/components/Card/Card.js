@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './Card.module.css';
 
-const Card = ({ icon, title, description, link }) => {
+const Card = ({ icon, title, description, link, style }) => {
   return (
-    <a href={link} className={styles.card} target="_blank" rel="noopener noreferrer">
+    // apply incoming inline styles to the anchor element
+    <a href={link} className={styles.card} style={style} target="_blank" rel="noopener noreferrer">
       <div className={styles.cardIcon}>{icon}</div>
       <div className={styles.cardContent}>
         <h3 className={styles.cardTitle}>{title}</h3>

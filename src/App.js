@@ -29,7 +29,7 @@ const sectionsData = [
       {
         icon: '👥',
         title: 'Event List by Team',
-        description: 'All the upcoming events in MAster Calendar grouped by Hosting Team',
+        description: 'All the upcoming events in Master Calendar grouped by Hosting Team',
         link: 'https://sharing.clickup.com/90132059689/l/h/2ky4m5h9-893/697acd6252dc213',
       },
       {
