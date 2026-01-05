@@ -6,6 +6,11 @@
     border-bottom: 1px solid var(--border-color);
   }
   
+  .cdsLogo {
+  width: 36px;
+  display: block;
+}
+
   .logo {
     display: flex;
     align-items: center;
