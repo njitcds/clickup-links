@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'; // Import useState and useEffect
 import './App.css';
 import Header from './components/Header/Header';
 import Section from './components/Section/Section';
@@ -101,9 +101,28 @@ const sectionsData = [
 ];
 
 function App() {
+  // State to hold the current theme. It checks localStorage first,
+  // then defaults to 'dark-mode'.
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark-mode');
+
+  // Function to toggle the theme
+  const toggleTheme = () => {
+    const newTheme = theme === 'dark-mode' ? 'light-mode' : 'dark-mode';
+    setTheme(newTheme);
+  };
+
+  // useEffect hook to update the body class and localStorage when the theme changes
+  useEffect(() => {
+    document.body.className = theme; // Apply theme class to the body
+    localStorage.setItem('theme', theme); // Save theme to localStorage
+  }, [theme]);
+
   return (
+    // We remove the fragment <> and use a div to ensure the theme class can be applied if needed,
+    // though applying to document.body is more robust.
     <>
-      <Header />
+      {/* Pass the theme and toggle function to the Header */}
+      <Header theme={theme} toggleTheme={toggleTheme} />
       <main className="app-container">
         {sectionsData.map((section, index) => (
           <Section key={index} title={section.title} cards={section.cards} />
