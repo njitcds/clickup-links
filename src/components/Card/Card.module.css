@@ -16,8 +16,11 @@
   }
   
   .cardIcon {
-    font-size: 1.75rem;
+    font-size: 2.2rem;
     margin-top: 4px; /* Align icon better with text */
+  }
+  .cardIcon img {
+    width: 4rem;;
   }
   
   .cardTitle {

@@ -23,6 +23,8 @@ const Section = ({ title, cards }) => {
                 : {}
             }
             icon={card.icon}
+            emoji={card.emoji}
+            image_url={card.image_url}
             title={card.title}
             description={card.description}
             link={card.link}
