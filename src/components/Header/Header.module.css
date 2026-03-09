@@ -6,6 +6,11 @@
     border-bottom: 1px solid var(--border-color);
   }
   
+  .cdsLogo {
+  width: 36px;
+  display: block;
+}
+
   .logo {
     display: flex;
     align-items: center;
@@ -33,7 +38,7 @@
   
   .ctaButton {
     background: var(--accent-gradient);
-    color: white;
+    color: var(--text-primary);
     border: none;
     padding: 0.6rem 1.2rem;
     border-radius: 6px;
@@ -48,7 +53,18 @@
   
   /* Responsive */
   @media (max-width: 768px) {
+    /* Keep nav links visible on small screens, but make them compact and touch-friendly */
     .navLinks {
-      display: none; /* Hide nav links on smaller screens for simplicity */
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .navLinks a {
+      font-size: 0.95rem;
+      padding: 0.2rem 0.4rem;
+      border-radius: 6px;
+      background: var(--background-secondary);
+      color: var(--text-secondary);
     }
   }

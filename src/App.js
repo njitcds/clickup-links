@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'; // Import useState and useEffect
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Section from './components/Section/Section';
+import FAQ from './components/FAQ/FAQ';
 
 // Data for our sections and cards
 const sectionsData = [
@@ -28,7 +29,7 @@ const sectionsData = [
       {
         icon: '👥',
         title: 'Event List by Team',
-        description: 'All the upcoming events in MAster Calendar grouped by Hosting Team',
+        description: 'All the upcoming events in Master Calendar grouped by Hosting Team',
         link: 'https://sharing.clickup.com/90132059689/l/h/2ky4m5h9-893/697acd6252dc213',
       },
       {
@@ -101,33 +102,30 @@ const sectionsData = [
 ];
 
 function App() {
-  // State to hold the current theme. It checks localStorage first,
-  // then defaults to 'dark-mode'.
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark-mode');
+  const [route, setRoute] = useState(window.location.hash || '#/');
 
-  // Function to toggle the theme
-  const toggleTheme = () => {
-    const newTheme = theme === 'dark-mode' ? 'light-mode' : 'dark-mode';
-    setTheme(newTheme);
-  };
-
-  // useEffect hook to update the body class and localStorage when the theme changes
   useEffect(() => {
-    document.body.className = theme; // Apply theme class to the body
-    localStorage.setItem('theme', theme); // Save theme to localStorage
-  }, [theme]);
+    const onHashChange = () => setRoute(window.location.hash || '#/');
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
+
+  const isFaqs = route.replace(/^#/, '') === '/faqs';
 
   return (
     // We remove the fragment <> and use a div to ensure the theme class can be applied if needed,
     // though applying to document.body is more robust.
     <>
-      {/* Pass the theme and toggle function to the Header */}
-      <Header theme={theme} toggleTheme={toggleTheme} />
-      <main className="app-container">
-        {sectionsData.map((section, index) => (
-          <Section key={index} title={section.title} cards={section.cards} />
-        ))}
-      </main>
+      <Header />
+      {isFaqs ? (
+        <FAQ />
+      ) : (
+        <main className="app-container">
+          {sectionsData.map((section, index) => (
+            <Section key={index} title={section.title} cards={section.cards} />
+          ))}
+        </main>
+      )}
     </>
   );
 }
